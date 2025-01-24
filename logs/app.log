@@ -1,0 +1,152 @@
+2025-01-23T20:14:33.053Z [info]: Project started successfully on port 3000
+2025-01-23T20:14:33.063Z [info]: Server running on port 3000
+2025-01-23T20:16:34.993Z [info]: Project started successfully on port 3000
+2025-01-23T20:16:35.002Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:16:59.465Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:16:59.604Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:16:59.608Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:16:59.621Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:16:59.629Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:16:59.640Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:16:59.649Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:16:59.718Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:17:47.139Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:17:47.289Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:17:47.292Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:17:47.295Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:17:47.301Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:17:47.305Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:17:47.312Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:17:47.368Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:17:47.576Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:17:47.585Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:17:47.592Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:17:47.600Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:17:47.607Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:17:47.613Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:17:47.620Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:17:47.673Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:22:28.552Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:22:28.589Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:22:28.743Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:22:28.760Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:22:28.775Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:22:28.783Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:22:28.795Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:22:28.803Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:22:28.853Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:22:28.863Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:22:28.872Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:22:28.884Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:22:28.891Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:22:28.906Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:22:28.952Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:22:28.976Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:30:03.500Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:30:03.528Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:30:03.689Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:30:03.700Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:30:03.706Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:30:03.711Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:30:03.715Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:30:03.720Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:30:03.727Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:30:03.730Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:30:03.733Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:30:03.737Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:30:03.744Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:30:03.751Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:30:03.786Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:30:03.810Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:30:29.419Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:30:29.455Z [info]: ✔️ Fetched 20 images and metadata for folder amstel
+2025-01-23T20:30:29.601Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:30:29.607Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:30:29.611Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:30:29.620Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:30:29.627Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:30:29.637Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:30:29.647Z [info]: ✔️ Fetched 36 images and metadata for folder konijnenstraat16
+2025-01-23T20:30:29.656Z [info]: ✔️ Fetched 18 images and metadata for folder herengracht555
+2025-01-23T20:30:29.666Z [info]: ✔️ Fetched 26 images and metadata for folder keizersgracht210
+2025-01-23T20:30:29.673Z [info]: ✔️ Fetched 24 images and metadata for folder herengracht237
+2025-01-23T20:30:29.678Z [info]: ✔️ Fetched 3 images and metadata for folder banner
+2025-01-23T20:30:29.684Z [info]: ✔️ Fetched 9 images and metadata for folder diepenheim
+2025-01-23T20:30:29.693Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:30:29.742Z [info]: ✔️ Fetched all folders from S3
+2025-01-23T20:31:15.185Z [info]: Project started successfully on port 3000
+2025-01-23T20:31:15.199Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:32:44.913Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:32:44.921Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:17.115Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:17.122Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:20.532Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:20.537Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:28.950Z [info]: Project started successfully on port 3000
+2025-01-23T20:34:28.962Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:34:36.773Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:34:36.784Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:35:50.402Z [info]: Project started successfully on port 3000
+2025-01-23T20:35:50.412Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:35:56.852Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:35:56.864Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:36:26.452Z [info]: Project started successfully on port 3000
+2025-01-23T20:36:26.466Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:36:28.792Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:36:28.804Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:36:50.228Z [info]: Project started successfully on port 3000
+2025-01-23T20:36:50.241Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:36:52.590Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:36:52.601Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:39:11.667Z [info]: Project started successfully on port 3000
+2025-01-23T20:39:11.677Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:39:16.756Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:39:16.770Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:40:16.715Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:40:16.722Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-23T20:40:44.747Z [info]: Project started successfully on port 3000
+2025-01-23T20:40:44.767Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:40:47.985Z [error]: ❌ Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:40:47.999Z [error]: ❌ Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:42:00.076Z [error]: ❌ Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:42:00.084Z [error]: ❌ Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:43:00.876Z [info]: Project started successfully on port 3000
+2025-01-23T20:43:00.890Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:43:09.348Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:43:09.362Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:47:05.792Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:47:05.806Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:47:15.640Z [info]: Project started successfully on port 3000
+2025-01-23T20:47:15.650Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:47:19.155Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:47:19.168Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:49:11.853Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:49:11.859Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:50:53.265Z [info]: Project started successfully on port 3000
+2025-01-23T20:50:53.278Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:50:57.893Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:50:57.920Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:52:46.800Z [info]: Project started successfully on port 3000
+2025-01-23T20:52:46.810Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:52:50.327Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:52:50.356Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:53:13.216Z [info]: Project started successfully on port 3000
+2025-01-23T20:53:13.227Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:53:16.907Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:53:16.925Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:53:28.178Z [info]: Project started successfully on port 3000
+2025-01-23T20:53:28.186Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:53:32.744Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:53:32.756Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:54:05.999Z [info]: Project started successfully on port 3000
+2025-01-23T20:54:06.012Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:54:10.383Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:54:10.412Z [error]: ❌  Error fetching folders from S3: Resolved credential object is not valid
+2025-01-23T20:56:32.335Z [info]: Project started successfully on port 3000
+2025-01-23T20:56:32.370Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:57:00.719Z [info]: Project started successfully on port 3000
+2025-01-23T20:57:00.728Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:57:54.682Z [info]: Project started successfully on port 3000
+2025-01-23T20:57:54.692Z [info]: ✔️ Server running on port 3000
+2025-01-23T20:58:42.177Z [info]: Project started successfully on port 3000
+2025-01-23T20:58:42.192Z [info]: ✔️ Server running on port 3000
