@@ -1,22 +1,33 @@
+version: "3.8"
+
 services:
-    frontend:
-        image: pellevkv/vkvrestauraties:latest
-        container_name: vkvrestauraties_frontend
+    react-app:
+        build:
+            context: ./react-app
+            dockerfile: Dockerfile
         ports:
-            - "8000:3000" # Maps localhost:8000 to the container's port 3000
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+        restart: always
+
+    nodejs-app:
+        build:
+            context: ./nodejs-app
+            dockerfile: Dockerfile
+        ports:
+            - "4000:4000"
+        environment:
+            - NODE_ENV=production
+        restart: always
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
         depends_on:
-            - backend
-        networks:
-            - vkv_network
-
-    backend:
-        image: pellevkv/vkvrestauraties_backend:latest
-        container_name: vkvrestauraties_backend
-        ports:
-            - "8080:8080" # Maps localhost:8080 to the container's port 8080
-        networks:
-            - vkv_network
-
-networks:
-    vkv_network:
-        driver: bridge
+            - react-app
+            - nodejs-app
+        restart: always
