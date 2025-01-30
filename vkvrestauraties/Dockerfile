@@ -10,6 +10,8 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN chmod +x node_modules/.bin/*
+
 # Copy the entire application source code
 COPY . .
 
