@@ -7,13 +7,12 @@ const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(1);
 
     const images = projectData.find(project => project.title === "banner")?.images || [];
-    console.log(images);
 
     // Effect to change the image every 3 seconds
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 7000); // Change image every 7 seconds
+        }, 20000); // Change image every 20 seconds
 
         // Cleanup interval on component unmount
         return () => clearInterval(intervalId);
