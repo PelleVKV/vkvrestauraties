@@ -13,7 +13,8 @@ export const ImageProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/folders'); // Change this URL if necessary
+                const response =
+                    await fetch(process.env.REACT_APP_BACKEND_API + '/api/folders');
                 const data = await response.json();
 
                 const transformedData = data.folders.map(folder => ({
