@@ -1,33 +1,20 @@
-# Stage 1: Build the application
-FROM node:22-alpine AS build
+# Stage 1: Set up Node.js environment
+FROM node:22-alpine
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package.json and package-lock.json (if present)
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
-# Copy the rest of the application code
+# Copy the rest of the application source code
 COPY . .
 
-# Build the application (if applicable)
-# If your app doesn't require a build step, you can skip this command
-RUN npm run build
-
-# Stage 2: Production image
-FROM node:22-alpine
-
-# Set the working directory
-WORKDIR /app
-
-# Copy only the necessary files from the build stage
-COPY --from=build /app .
-
-# Expose the application port (update this to your app's port)
+# Expose the port your app will run on
 EXPOSE 3000
 
-# Start the application
+# Start the Node.js application (assumes your app is started with `npm start`)
 CMD ["npm", "start"]
