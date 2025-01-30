@@ -1,0 +1,537 @@
+[
+    {
+        "lat": 52.35481,
+        "lng": 4.88287,
+        "name": "Frans van Mierisstraat 24"
+    },
+    {
+        "lat": 52.35549,
+        "lng": 4.87648,
+        "name": "Johannes Verhulststraat 23"
+    },
+    {
+        "lat": 52.36684,
+        "lng": 4.86309,
+        "name": "Wenslauerstraat 71"
+    },
+    {
+        "lat": 52.36463,
+        "lng": 4.88458,
+        "name": "Prinsengracht 460"
+    },
+    {
+        "lat": 52.364373,
+        "lng": 4.891076,
+        "name": "Keizersgracht 573"
+    },
+    {
+        "lat": 52.36545,
+        "lng": 4.88674,
+        "name": "Keizersgracht 524"
+    },
+    {
+        "lat": 52.362315,
+        "lng": 4.896537,
+        "name": "Kerkstraat 72"
+    },
+    {
+        "lat": 52.365,
+        "lng": 4.88592,
+        "name": "Kerkstraat 64"
+    },
+    {
+        "lat": 52.37685,
+        "lng": 4.89059,
+        "name": "Langestraat 96"
+    },
+    {
+        "lat": 52.36347,
+        "lng": 4.98805,
+        "name": "Barkasstraat 82"
+    },
+    {
+        "lat": 52.35765,
+        "lng": 4.88485,
+        "name": "Honthorststraat 34"
+    },
+    {
+        "lat": 52.35572,
+        "lng": 4.87009,
+        "name": "Willemsparkweg 185"
+    },
+    {
+        "lat": 52.3463,
+        "lng": 4.89453,
+        "name": "Deurloostraat 4"
+    },
+    {
+        "lat": 52.36192,
+        "lng": 4.87407,
+        "name": "Tweede Constantijn Huygenstraat"
+    },
+    {
+        "lat": 52.35217,
+        "lng": 4.93348,
+        "name": "Middenweg 113"
+    },
+    {
+        "lat": 52.36853,
+        "lng": 4.90829,
+        "name": "Herengracht 123"
+    },
+    {
+        "lat": 52.36789,
+        "lng": 4.88627,
+        "name": "Herengracht 386"
+    },
+    {
+        "lat": 52.373036,
+        "lng": 4.896705,
+        "name": "Oude Zijdse Voorburgwal 187"
+    },
+    {
+        "lat": 52.32043,
+        "lng": 4.85991,
+        "name": "Schepenenlaan 7"
+    },
+    {
+        "lat": 52.35583,
+        "lng": 4.89965,
+        "name": "Tweede Jan Steenstraat 32"
+    },
+    {
+        "lat": 52.3524,
+        "lng": 4.89435,
+        "name": "van Ostadestraat 184-188"
+    },
+    {
+        "lat": 52.37771,
+        "lng": 4.88514,
+        "name": "Tuinstraat 16"
+    },
+    {
+        "lat": 52.37247,
+        "lng": 4.9518,
+        "name": "Scheepstimmerman Straat 132"
+    },
+    {
+        "lat": 52.36376,
+        "lng": 4.90134,
+        "name": "Amstel 250"
+    },
+    {
+        "lat": 52.30535,
+        "lng": 4.90504,
+        "name": "Amsteldijk-Noord 50"
+    },
+    {
+        "lat": 52.35568,
+        "lng": 4.87724,
+        "name": "Johannes Verhulststraat 5"
+    },
+    {
+        "lat": 52.36658,
+        "lng": 4.87594,
+        "name": "Jacob van Lennepkade 16"
+    },
+    {
+        "lat": 52.36102,
+        "lng": 4.89478,
+        "name": "Noorderstraat 70"
+    },
+    {
+        "lat": 52.36141,
+        "lng": 4.89294,
+        "name": "Noorderstraat 33-35-37"
+    },
+    {
+        "lat": 52.35802,
+        "lng": 4.87758,
+        "name": "Willemsparkweg 10"
+    },
+    {
+        "lat": 52.37176,
+        "lng": 4.89692,
+        "name": "Oudezijds Achterburgwal 148 - 150"
+    },
+    {
+        "lat": 52.38642,
+        "lng": 4.88677,
+        "name": "Prinseneiland 59"
+    },
+    {
+        "lat": 52.36174,
+        "lng": 4.89307,
+        "name": "Prinsengracht 674"
+    },
+    {
+        "lat": 52.36018,
+        "lng": 4.92666,
+        "name": "Wijttenbachstraat 30"
+    },
+    {
+        "lat": 52.3665,
+        "lng": 4.88738,
+        "name": "Leidsestraat 18"
+    },
+    {
+        "lat": 52.35542,
+        "lng": 4.88869,
+        "name": "Frans Halsstraat 77"
+    },
+    {
+        "lat": 52.37257,
+        "lng": 4.90101,
+        "name": "Nieuwmarkt 7"
+    },
+    {
+        "lat": 52.35307,
+        "lng": 4.88091,
+        "name": "Bronckhorststraat 16"
+    },
+    {
+        "lat": 52.35741,
+        "lng": 4.88836,
+        "name": "Jacob van Campenstraat 28"
+    },
+    {
+        "lat": 52.36118,
+        "lng": 4.88863,
+        "name": "Weteringstraat 42"
+    },
+    {
+        "lat": 52.20523,
+        "lng": 5.17406,
+        "name": "Eikenlaan 38"
+    },
+    {
+        "lat": 52.389887,
+        "lng": 4.634726,
+        "name": "Schotersingel 72"
+    },
+    {
+        "lat": 52.3544,
+        "lng": 4.87006,
+        "name": "Valeriusstraat 65"
+    },
+    {
+        "lat": 52.35158,
+        "lng": 4.8586,
+        "name": "Valeriusstraat 270"
+    },
+    {
+        "lat": 52.35183,
+        "lng": 4.85945,
+        "name": "Valeriusstraat 252"
+    },
+    {
+        "lat": 52.35527,
+        "lng": 4.88882,
+        "name": "Gerard Doustraat 11"
+    },
+    {
+        "lat": 52.36497,
+        "lng": 4.8766,
+        "name": "3e Helmerstraat 35"
+    },
+    {
+        "lat": 52.375487,
+        "lng": 4.902473,
+        "name": "Geldersekade 19"
+    },
+    {
+        "lat": 52.31226,
+        "lng": 4.86413,
+        "name": "Kruisveer 7"
+    },
+    {
+        "lat": 52.36153,
+        "lng": 4.92755,
+        "name": "Pieter Nieuwlandstraat 26"
+    },
+    {
+        "lat": 52.63218,
+        "lng": 4.74185,
+        "name": "Scheteldoekshaven 3"
+    },
+    {
+        "lat": 52.39424,
+        "lng": 4.87948,
+        "name": "Stettineiland 59"
+    },
+    {
+        "lat": 52.349243,
+        "lng": 4.917003,
+        "name": "Wibautstraat 182"
+    },
+    {
+        "lat": 52.36174,
+        "lng": 4.89307,
+        "name": "Prinsengracht 674"
+    },
+    {
+        "lat": 52.36283,
+        "lng": 4.88864,
+        "name": "Prinsengracht 815"
+    },
+    {
+        "lat": 52.36258,
+        "lng": 4.89053,
+        "name": "Prinsengracht 907"
+    },
+    {
+        "lat": 52.371,
+        "lng": 4.90194,
+        "name": "Kromboomsloot 65"
+    },
+    {
+        "lat": 52.37494,
+        "lng": 4.90267,
+        "name": "Kromme Waal 16"
+    },
+    {
+        "lat": 52.37218,
+        "lng": 4.90524,
+        "name": "Oude Waal 42"
+    },
+    {
+        "lat": 52.37269,
+        "lng": 4.90669,
+        "name": "Kalkmarkt 8"
+    },
+    {
+        "lat": 52.37394,
+        "lng": 4.90521,
+        "name": "Prins Hendrikkade 128"
+    },
+    {
+        "lat": 52.38112,
+        "lng": 4.89012,
+        "name": "Haarlemmerstraat 128"
+    },
+    {
+        "lat": 52.51407,
+        "lng": 5.04694,
+        "name": "Brouwersgracht"
+    },
+    {
+        "lat": 52.37616,
+        "lng": 4.88852,
+        "name": "Herengracht 108"
+    },
+    {
+        "lat": 52.37616,
+        "lng": 4.88715,
+        "name": "Keizersgracht 129 - 131"
+    },
+    {
+        "lat": 52.37898,
+        "lng": 4.88972,
+        "name": "Keizersgracht 23"
+    },
+    {
+        "lat": 52.37867,
+        "lng": 4.89109,
+        "name": "Herengracht 18"
+    },
+    {
+        "lat": 52.37236,
+        "lng": 4.88609,
+        "name": "Hartenstraat 14"
+    },
+    {
+        "lat": 52.3667,
+        "lng": 4.88574,
+        "name": "Keizersgracht 431"
+    },
+    {
+        "lat": 52.36665,
+        "lng": 4.88579,
+        "name": "Keizersgracht 433"
+    },
+    {
+        "lat": 52.37177,
+        "lng": 4.89832,
+        "name": "Bethaniënstraat 25"
+    },
+    {
+        "lat": 52.35642,
+        "lng": 4.89847,
+        "name": "Govert Flinckstraat 263"
+    },
+    {
+        "lat": 52.356303,
+        "lng": 4.878419,
+        "name": "Jan Willem Brouwerstraat 7"
+    },
+    {
+        "lat": 52.26347,
+        "lng": 5.24178,
+        "name": "Schapendrift"
+    },
+    {
+        "lat": 52.35751,
+        "lng": 4.89756,
+        "name": "Stadhouderskade 113"
+    },
+    {
+        "lat": 52.35784,
+        "lng": 4.85738,
+        "name": "Zocherstraat 4"
+    },
+    {
+        "lat": 52.38861,
+        "lng": 4.92677,
+        "name": "Zamenhofstraat 41"
+    },
+    {
+        "lat": 52.35595,
+        "lng": 4.88419,
+        "name": "Johannes Vermeerstraat 53"
+    },
+    {
+        "lat": 52.344396,
+        "lng": 4.918125,
+        "name": "Amstel 273"
+    },
+    {
+        "lat": 52.34735,
+        "lng": 4.87993,
+        "name": "Stadionweg 54"
+    },
+    {
+        "lat": 52.38252,
+        "lng": 4.88539,
+        "name": "Brouwersgracht 254"
+    },
+    {
+        "lat": 52.34057,
+        "lng": 4.87502,
+        "name": "Strawinskilaan 227"
+    },
+    {
+        "lat": 52.38488,
+        "lng": 4.89174,
+        "name": "Westerdok 376"
+    },
+    {
+        "lat": 52.34786,
+        "lng": 4.88007,
+        "name": "Bachplein"
+    },
+    {
+        "lat": 52.34672,
+        "lng": 4.89301,
+        "name": "Churchilllaan 139"
+    },
+    {
+        "lat": 52.36955,
+        "lng": 4.92004,
+        "name": "Wittenburger gracht 239"
+    },
+    {
+        "lat": 52.36031,
+        "lng": 4.89277,
+        "name": "Fokke Simonszstraat 32"
+    },
+    {
+        "lat": 52.35346,
+        "lng": 4.89162,
+        "name": "Eerste Jan van der Heijdenstraat"
+    },
+    {
+        "lat": 52.35291,
+        "lng": 4.85346,
+        "name": "Schinkelkade 23"
+    },
+    {
+        "lat": 52.36255,
+        "lng": 4.91073,
+        "name": "Roeterstraat 170"
+    },
+    {
+        "lat": 52.232464,
+        "lng": 5.121134,
+        "name": "Emmaweg 39"
+    },
+    {
+        "lat": 52.36159,
+        "lng": 4.8942,
+        "name": "Prinsengracht 702"
+    },
+    {
+        "lat": 52.36248,
+        "lng": 4.87167,
+        "name": "Eerste Helmerstraat 111"
+    },
+    {
+        "lat": 52.36215,
+        "lng": 4.8704,
+        "name": "Eerste Helmerstraat 139"
+    },
+    {
+        "lat": 52.39034,
+        "lng": 4.88683,
+        "name": "van Diemenstraat 410"
+    },
+    {
+        "lat": 52.413991,
+        "lng": 4.677179,
+        "name": "Westkolk 24"
+    },
+    {
+        "lat": 52.38634,
+        "lng": 4.88792,
+        "name": "Prinseneiland 10"
+    },
+    {
+        "lat": 52.37666,
+        "lng": 4.88924,
+        "name": "Herengracht 92"
+    },
+    {
+        "lat": 52.37665,
+        "lng": 4.88911,
+        "name": "Herengracht 94"
+    },
+    {
+        "lat": 52.34849,
+        "lng": 4.89548,
+        "name": "Tweede van der Helststraat 99"
+    },
+    {
+        "lat": 52.37655,
+        "lng": 4.88913,
+        "name": "Herengracht 96"
+    },
+    {
+        "lat": 52.34614,
+        "lng": 4.87648,
+        "name": "Beethovenstraat 124"
+    },
+    {
+        "lat": 52.35624,
+        "lng": 4.84963,
+        "name": "Warmontstraat 73"
+    },
+    {
+        "lat": 52.35568,
+        "lng": 4.87373,
+        "name": "Banstraat 5"
+    },
+    {
+        "lat": 52.35579,
+        "lng": 4.8995,
+        "name": "Tweede Jan Steenstraat 28"
+    },
+    {
+        "lat": 52.36337,
+        "lng": 4.88562,
+        "name": "Lange Leidse Dwarsstraat 79"
+    },
+    {
+        "lat": 52.36346,
+        "lng": 4.88635,
+        "name": "Prinsengracht 522"
+    }
+]

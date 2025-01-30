@@ -150,3 +150,11 @@
 2025-01-23T20:57:54.692Z [info]: ✔️ Server running on port 3000
 2025-01-23T20:58:42.177Z [info]: Project started successfully on port 3000
 2025-01-23T20:58:42.192Z [info]: ✔️ Server running on port 3000
+2025-01-30T15:12:17.936Z [info]: Project started successfully on port 3000
+2025-01-30T15:12:17.960Z [info]: ✔️ Server running on port 3000
+2025-01-30T15:20:44.733Z [info]: Project started successfully on port 3000
+2025-01-30T15:20:44.742Z [info]: ✔️ Server running on port 3000
+2025-01-30T15:22:16.216Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-30T15:22:16.229Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-30T15:22:46.688Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.
+2025-01-30T15:22:46.698Z [error]: ❌ Error fetching folders from S3: No value provided for input HTTP label: Bucket.

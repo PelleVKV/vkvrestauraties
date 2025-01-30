@@ -1,11 +1,23 @@
 const express = require('express');
 const { S3Client, ListObjectsV2Command, GetObjectCommand } = require('@aws-sdk/client-s3');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
 
 require('dotenv').config();
 
 const morgan = require('morgan');
 const logger = require('./logger'); // Import the winston logger
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail', // or another email provider
+    auth: {
+        user: 'info@vkvr.nl',
+        pass: 'Starnakel1!',
+    },
+    tls: {
+        rejectUnauthorized: false, // Use this line to avoid SSL certificate errors
+    },
+});
 
 // Initialize the AWS SDK v3 with the correct region (no need to specify the endpoint)
 const s3 = new S3Client({
@@ -21,6 +33,7 @@ const app = express();
 
 app.use(cors());
 app.use(morgan('combined'));
+app.use(express.json());
 
 const getFilesInFolder = async (folderName) => {
     const params = {
@@ -92,6 +105,25 @@ app.get('/api/folders', async (req, res) => {
     }
 });
 
+app.post('/api/send-email', (req, res) => {
+    const { name, email, message } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: 'info@vkvr.nl',
+        subject: `Contact Form Submission from ${name}`,
+        text: `You have received a new message from ${name} (${email}):\n\n${message}`,
+    };
+
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            logger.error(`❌ Error sending email: ${err.message}`);
+            return res.status(500).json({ message: 'Failed to send the email. Please try again later.' });
+        }
+        logger.info(`✔️ Email sent: ${info.response}`);
+        return res.status(200).json({ message: 'Email sent successfully!' });
+    });
+});
 
 // Helper function to convert a stream to a buffer
 const streamToBuffer = (stream) => {
