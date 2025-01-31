@@ -11,7 +11,7 @@ const Root = () => {
     }
 
     return (
-        <div className="w-screen h-screen font-sans bg-black select-none overflow-hidden">
+        <div className="w-screen h-screen font-sans bg-black select-none lg:overflow-hidden">
             <div className={`absolute hidden sm:hidden md:hidden lg:flex space-x-2 w-1/2 h-24 py-10 z-20 justify-center 
             ${route.pathname === '/map' ? 'text-red-800 font-extrabold' : 'text-white'}`}>
                 <Link to="/" className="relative inline-block text-sm font-medium after:absolute
@@ -46,22 +46,23 @@ const Root = () => {
                     CONTACT</Link>
             </div>
 
-            <div className={`flex flex-col fixed lg:hidden top-0 left-0 w-full h-full text-xl text-white z-50`}>
+            <div className={`flex flex-col fixed lg:hidden top-0 left-0 w-full h-full text-xl text-white z-20`}>
 
-                <div className="flex justify-between w-full px-4 h-12 items-center bg-gray-400/50">
+                <div className="flex justify-between w-full px-4 h-12 items-center bg-gray-400/50 z-50">
                     <Link to="/">VKV RESTAURATIES</Link>
                     <MenuOutlined onClick={toggleCollapse}/>
                 </div>
 
-                <div className={`w-full h-full justify-center items-center 
-                ${collapsed ? 'flex pointer-events-auto opacity-100' : 'hidden opacity-0 pointer-events-none'} bg-gray-400/50`}>
-                    <div className="flex flex-col h-3/4 justify-center items-center text-center text-xl space-y-6">
-                        <Link to="/projects" onClick={toggleCollapse}>PROJECTS</Link>
-                        <Link to="/aboutme" onClick={toggleCollapse}>ABOUT ME</Link>
-                        <Link to="/map" onClick={toggleCollapse}>MAP</Link>
-                        <Link to="/contact" onClick={toggleCollapse}>CONTACT</Link>
+                {collapsed && (
+                    <div className="w-full h-full fixed top-0 left-0 flex justify-center items-center bg-gray-400/50 z-20">
+                        <div className="flex flex-col h-3/4 justify-center items-center text-center text-xl space-y-6">
+                            <Link to="/projects" onClick={toggleCollapse}>PROJECTS</Link>
+                            <Link to="/aboutme" onClick={toggleCollapse}>ABOUT ME</Link>
+                            <Link to="/map" onClick={toggleCollapse}>MAP</Link>
+                            <Link to="/contact" onClick={toggleCollapse}>CONTACT</Link>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
 
             <Outlet/>
