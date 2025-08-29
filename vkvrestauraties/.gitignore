@@ -1,2 +1,18 @@
 .env
-./node_modules
+
+# dependencies & caches
+node_modules/
+**/node_modules/
+.cache/
+**/.cache/
+npm-debug.log*
+yarn-error.log*
+
+# build output
+build/
+dist/
+
+# local tooling
+.vercel/
+.vscode/
+.DS_Store
