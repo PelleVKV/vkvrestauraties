@@ -60,7 +60,7 @@ const Contact = () => {
                     <div className="flex flex-col space-y-8 text-sm">
                         <div className="w-full flex justify-between"><MailFilled/><p>info@vkvrestauraties.nl</p></div>
                         <div className="w-full flex justify-between"><PhoneFilled/><p>+31 6 52418553</p></div>
-                        <div className="w-full flex justify-between"><HomeFilled/><p>van Ostadestraat 176, Amsterdam</p>
+                        <div className="w-full flex justify-between"><HomeFilled/><p>van Ostadestraat 176, 1072THad Amsterdam</p>
                         </div>
                     </div>
                     <div className="flex space-x-4 w-full text-gray-400">

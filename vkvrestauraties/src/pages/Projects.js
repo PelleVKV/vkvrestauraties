@@ -11,7 +11,7 @@ const Projects = () => {
 
     // Filter projects on initial load to exclude 'banner'
     useEffect(() => {
-        const filteredProjects = projectData.filter(project => project.title !== 'banner');
+        const filteredProjects = projectData.filter(project => project.title !== 'banner' && project.title !== 'aboutme');
         setProjects(filteredProjects);
     }, [projectData]);
 
