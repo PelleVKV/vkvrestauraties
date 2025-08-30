@@ -7,7 +7,7 @@ import {Spin} from "antd";
 const ProjectPage = () => {
     const {projectData, loading, error} = useImageData();
     const [projectImages, setProjectImages] = useState(null);
-    const [imageIndex, setImageIndex] = useState(1);
+    const [imageIndex, setImageIndex] = useState(0);
 
     useEffect(() => {
         const path = window.location.pathname;
