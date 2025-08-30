@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 20000); // Change image every 20 seconds
+        }, 7500); // Change image every 7,5 seconds
 
         // Cleanup interval on component unmount
         return () => clearInterval(intervalId);
