@@ -33,12 +33,12 @@ const Projects = () => {
     } else {
         return (
             <div className="w-full h-full flex justify-center items-center py-24">
-                <div className="w-5/6 h-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 overflow-y-scroll">
+                <div className="w-5/6 h-full gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 overflow-y-scroll">
                     {projects.map((project) => (
                         <Link
                             to={`/project/${project.title}`}
                             key={project.title}
-                            className="relative h-[300px] w-[275px] group cursor-pointer overflow-hidden"
+                            className="relative h-[300px] w-[225px] group cursor-pointer overflow-hidden"
                         >
                             <LazyLoadImage
                                 src={`${process.env.REACT_APP_S3_URL}${project.banner}`}
