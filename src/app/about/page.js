@@ -57,44 +57,63 @@ export default function AboutPage() {
 
     const activeImage = images[activeSection.id - 1];
 
+    // Desktop: scroll inside the div
     useEffect(() => {
         const container = scrollRef.current;
         if (!container || images.length === 0) return;
 
         const headings = Array.from(container.querySelectorAll("h2[data-key]"));
         const viewportOffset = 200;
-
         let ticking = false;
 
         const handleScroll = () => {
             if (!ticking) {
                 window.requestAnimationFrame(() => {
                     let current = headings[0];
-
                     headings.forEach((heading) => {
                         const rect = heading.getBoundingClientRect();
                         const containerTop =
                             container.getBoundingClientRect().top;
-
                         if (rect.top - containerTop <= viewportOffset) {
                             current = heading;
                         }
                     });
-
                     const key = current?.dataset?.key;
                     if (key) setActiveKey(key);
-
                     ticking = false;
                 });
-
                 ticking = true;
             }
         };
 
         container.addEventListener("scroll", handleScroll);
         handleScroll();
-
         return () => container.removeEventListener("scroll", handleScroll);
+    }, [images]);
+
+    // Mobile: track window scroll instead
+    useEffect(() => {
+        if (images.length === 0) return;
+
+        const handleWindowScroll = () => {
+            const headings = Array.from(
+                document.querySelectorAll("h2[data-key]"),
+            );
+            const viewportOffset = 200;
+            let current = headings[0];
+
+            headings.forEach((heading) => {
+                if (heading.getBoundingClientRect().top <= viewportOffset) {
+                    current = heading;
+                }
+            });
+
+            const key = current?.dataset?.key;
+            if (key) setActiveKey(key);
+        };
+
+        window.addEventListener("scroll", handleWindowScroll);
+        return () => window.removeEventListener("scroll", handleWindowScroll);
     }, [images]);
 
     if (loading) {
@@ -106,8 +125,29 @@ export default function AboutPage() {
     }
 
     return (
-        <div className="relative justify-center w-full mt-32 px-8 lg:px-16 flex flex-col lg:flex-row gap-8">
-            {/* IMAGE PANEL */}
+        <div className="relative w-full mt-32 px-8 lg:px-16 flex flex-col lg:flex-row gap-8">
+            {/* IMAGE PANEL — desktop sticky, mobile inline between title and content */}
+            {/* Mobile image: shown at top, updates as user scrolls */}
+            <div className="block lg:hidden w-full mb-6">
+                <div className="relative aspect-4/5 overflow-hidden shadow-2xl max-w-sm mx-auto">
+                    <AnimatePresence mode="wait">
+                        {activeImage && (
+                            <motion.img
+                                key={activeSection.key}
+                                src={`https://vkvrestauraties-images.s3.eu-north-1.amazonaws.com/${activeImage}`}
+                                alt=""
+                                initial={{ opacity: 0, y: 8 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -8 }}
+                                transition={{ duration: 0.45 }}
+                                className="absolute inset-0 h-full w-full object-cover"
+                            />
+                        )}
+                    </AnimatePresence>
+                </div>
+            </div>
+
+            {/* Desktop image panel */}
             <div className="hidden lg:block w-1/3">
                 <div className="sticky top-24">
                     <div className="relative aspect-4/5 overflow-hidden shadow-2xl">
@@ -129,10 +169,10 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            {/* TEXT SCROLL */}
+            {/* TEXT — desktop: scrollable div, mobile: natural page flow */}
             <div
                 ref={scrollRef}
-                className="w-full lg:w-1/2 h-[80vh] overflow-y-auto text-xl text-white"
+                className="w-full lg:w-1/2 lg:h-[80vh] lg:overflow-y-auto text-xl text-white"
             >
                 <h2
                     data-key="wat-wij-doen"
@@ -175,11 +215,12 @@ export default function AboutPage() {
                     <li>Verantwoord watergebruik</li>
                     <li>Voorkomen van uitputting van grondstoffen</li>
                 </ul>
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Wij verzorgen uw project van A tot Z; van advies bij aankoop
                     tot en met de volledige uitvoering en verhuizing, met één
                     vast aanspreekpunt gedurende het hele proces.
                 </p>
+
                 <h2
                     data-key="funderingsherstel-en-kelderbouw"
                     className="text-2xl lg:text-3xl font-bold mb-4"
@@ -189,7 +230,7 @@ export default function AboutPage() {
                 <p className="mb-4 text-lg font-bold">
                     Funderingsherstel en kelderbouw
                 </p>
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Veel (Amsterdamse) huizen hebben te lijden onder een slechte
                     fundering als gevolg van het droogstaan van de palen waarop
                     de huizen zijn gebouwd. Op basis van, indien nodig,
@@ -200,13 +241,14 @@ export default function AboutPage() {
                     funderingsherstel; indien gewenst met toevoeging van extra
                     ruimte in de vorm van een kelder.
                 </p>
+
                 <h2
                     data-key="restauratie-van-monumentaal-stukwerk"
                     className="text-2xl lg:text-3xl font-bold mb-4"
                 >
                     Restauratie van monumentaal stukwerk
                 </h2>
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Monumentale gipsplafonds zijn van oorsprong gemaakt op
                     rietmatten; deze zijn in de loop der tijd verzadigd geraakt
                     met vocht en stof en de bevestigingsmiddelen aangetast door
@@ -221,8 +263,7 @@ export default function AboutPage() {
                 >
                     Restauratief schilderwerk
                 </h2>
-
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Regelmatig onderhoud van monumentaal schilderwerk is van het
                     grootste belang voor het behoud van onze monumenten. Oude
                     beschadigde verflagen en eventueel onderliggend
@@ -236,8 +277,7 @@ export default function AboutPage() {
                 >
                     Metselwerk en voegwerk
                 </h2>
-
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Door zetting en verzakking worden ook vaak de gevels en het
                     voegwerk aangetast; als gevolg moeten delen van de gevel
                     opnieuw worden opgemetseld en gevoegd.
@@ -249,8 +289,7 @@ export default function AboutPage() {
                 >
                     Restauratie van natuurstenen stoepen
                 </h2>
-
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Natuurstenen stoepen hebben te lijden onder de tand des
                     tijds; monumentale onderdelen worden gedemonteerd,
                     gerestaureerd en voorzien van een deugdelijk fundament terug
@@ -263,8 +302,7 @@ export default function AboutPage() {
                 >
                     Ramen en kozijnen
                 </h2>
-
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Oude huizen hebben oude enkele vaak hand geblazen ruiten;
                     prachtig, maar in deze tijd niet meer acceptabel. Moderne
                     technieken zorgen voor een aanzienlijk betere isolatie zowel
@@ -278,8 +316,7 @@ export default function AboutPage() {
                 >
                     Duurzame energieopwekking
                 </h2>
-
-                <p className="mb-64">
+                <p className="mb-16 lg:mb-64">
                     Verwarming met gasgestookte cv-ketels is uit de tijd.
                     Energie opwekking met behulp van bodem-energie, warmtepompen
                     en/of zonnepanelen is niet de toekomst maar de tegenwoordige

@@ -31,7 +31,7 @@ export default function Home() {
             setCurrentIndex((prev) =>
                 prev === images.length - 1 ? 0 : prev + 1,
             );
-        }, 15000); // change every 5 seconds
+        }, 7000); // change every 5 seconds
 
         return () => clearInterval(interval);
     }, [images]);
