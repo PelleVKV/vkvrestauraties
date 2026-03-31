@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({ children }) {
     return (
@@ -8,6 +9,7 @@ export default function RootLayout({ children }) {
 				<Navbar />
                 {children}
             </body>
+            <SpeedInsights />
         </html>
     );
 }
