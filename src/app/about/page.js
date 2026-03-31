@@ -125,7 +125,7 @@ export default function AboutPage() {
     }
 
     return (
-        <div className="relative w-full mt-32 px-8 lg:px-16 flex flex-col lg:flex-row gap-8">
+        <div className="relative justify-center items-center w-full mt-32 px-8 lg:px-16 flex flex-col lg:flex-row gap-8">
             {/* IMAGE PANEL — desktop sticky, mobile inline between title and content */}
             {/* Mobile image: shown at top, updates as user scrolls */}
             <div className="block lg:hidden w-full mb-6">
