@@ -14,7 +14,7 @@ const lexend = Lexend({
 const links = [
     { href: "/", label: "VKVRESTAURATIES" },
     { href: "/projects", label: "PROJECTS" },
-    { href: "/about", label: "ABOUT ME" },
+    { href: "/about", label: "ABOUT US" },
     { href: "/map", label: "MAP" },
     { href: "/contact", label: "CONTACT" },
 ];
@@ -28,7 +28,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-[2000] text-sm py-8 px-8 lg:px-16 flex justify-between items-center ${lexend.className} ${textColor}`}
+            className={`fixed top-0 left-0 w-full z-2000 text-sm py-8 px-8 lg:px-16 flex justify-between items-center ${lexend.className} ${textColor}`}
         >
             {/* Desktop nav */}
             <div className="hidden md:flex gap-2 items-center">
