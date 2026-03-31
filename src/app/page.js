@@ -37,7 +37,7 @@ export default function Home() {
     }, [images]);
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
+        <div className="relative w-screen h-screen overflow-hidden inset-0">
             {images.map((img, index) => (
                 <Image
                     key={img}
