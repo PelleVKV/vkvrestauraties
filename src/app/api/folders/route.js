@@ -1,5 +1,3 @@
-console.log("folders route loaded");
-
 import { NextResponse } from "next/server";
 
 // Simple in-memory cache
@@ -7,8 +5,6 @@ let folderCache = null;
 let cacheTimestamp = null;
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
-// Rewrites a Portfolio Manager image URL to go through our local proxy,
-// avoiding cross-origin browser blocks.
 function proxyUrl(imageUrl) {
     return `/api/image-proxy?url=${encodeURIComponent(imageUrl)}`;
 }
@@ -21,10 +17,11 @@ export async function GET(req) {
         const host =
             process.env.NEXT_PUBLIC_PORTFOLIO_MANAGER_IP ||
             "http://localhost:3000";
-
         if (!project) {
             return NextResponse.json(
-                { error: "Project name is required as query parameter (?project=)." },
+                {
+                    error: "Project name is required as query parameter (?project=).",
+                },
                 { status: 400 },
             );
         }
@@ -40,7 +37,9 @@ export async function GET(req) {
         });
 
         if (!res.ok) {
-            const err = await res.json().catch(() => ({ error: res.statusText }));
+            const err = await res
+                .json()
+                .catch(() => ({ error: res.statusText }));
             return NextResponse.json(
                 { error: err.error || "Portfolio Manager request failed" },
                 { status: res.status },
@@ -52,12 +51,15 @@ export async function GET(req) {
         const foldersData = pmFolders.map((f) => ({
             folder: f.folder,
             title: f.projectName || f.folder,
-            // Rewrite all image URLs through our local proxy
             images: f.images.map((img) => proxyUrl(img.url)),
             metadata: {
                 title: f.projectName || f.folder,
                 bannerImage: f.bannerImage ? proxyUrl(f.bannerImage) : null,
                 folder: f.folder,
+                // Combine lat/lng into the comma-separated string MapClient expects
+                ...(f.lat != null && f.lng != null
+                    ? { latlng: `${f.lat},${f.lng}` }
+                    : {}),
             },
         }));
 
