@@ -14,7 +14,7 @@ export default function MapPage() {
     useEffect(() => {
         async function loadData() {
             const res = await fetch(
-                "/api/folders?bucket=vkvrestauraties-images",
+                "/api/folders?project=vkvrestauraties",
             );
             const data = await res.json();
             setProjectData(data.folders || []);
