@@ -28,7 +28,7 @@ export default function AboutPage() {
     useEffect(() => {
         async function fetchImages() {
             const res = await fetch(
-                `/api/folders?bucket=${process.env.NEXT_PUBLIC_BUCKET_NAME}`,
+                `/api/folders?project=vkvrestauraties`,
             );
             const data = await res.json();
 
@@ -37,6 +37,7 @@ export default function AboutPage() {
             );
 
             if (aboutFolder) {
+                // Images are now full URLs — sort by the numeric part of the filename.
                 const sorted = aboutFolder.images.sort((a, b) => {
                     const aNum = parseInt(a.match(/\d+/)?.[0] || 0);
                     const bNum = parseInt(b.match(/\d+/)?.[0] || 0);
@@ -134,7 +135,7 @@ export default function AboutPage() {
                         {activeImage && (
                             <motion.img
                                 key={activeSection.key}
-                                src={`https://vkvrestauraties-images.s3.eu-north-1.amazonaws.com/${activeImage}`}
+                                src={activeImage}
                                 alt=""
                                 initial={{ opacity: 0, y: 8 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -155,7 +156,7 @@ export default function AboutPage() {
                             {activeImage && (
                                 <motion.img
                                     key={activeSection.key}
-                                    src={`https://vkvrestauraties-images.s3.eu-north-1.amazonaws.com/${activeImage}`}
+                                    src={activeImage}
                                     alt=""
                                     initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}

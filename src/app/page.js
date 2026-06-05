@@ -10,7 +10,7 @@ export default function Home() {
     useEffect(() => {
         async function fetchImages() {
             const res = await fetch(
-                `/api/folders?bucket=${process.env.NEXT_PUBLIC_BUCKET_NAME}`,
+                `/api/folders?project=vkvrestauraties`,
             );
             const data = await res.json();
 
@@ -19,6 +19,7 @@ export default function Home() {
             );
 
             if (bannerFolder) {
+                // Images are now full URLs — use them directly.
                 setImages(bannerFolder.images);
             }
         }
@@ -36,7 +37,6 @@ export default function Home() {
 
     useEffect(() => {
         if (images.length === 0) return;
-
         const interval = setInterval(goNext, 7000);
         return () => clearInterval(interval);
     }, [images, goNext]);
@@ -54,8 +54,8 @@ export default function Home() {
         <div className="relative w-screen h-screen overflow-hidden inset-0">
             {images.map((img, index) => (
                 <Image
-                    key={img}
-                    src={`https://vkvrestauraties-images.s3.eu-north-1.amazonaws.com/${img}`}
+                    key={index}
+                    src={img}
                     alt="Banner"
                     fill
                     priority={index === 0}
@@ -71,16 +71,7 @@ export default function Home() {
                 className="absolute left-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors duration-200"
                 aria-label="Previous image"
             >
-                <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="15 18 9 12 15 6" />
                 </svg>
             </button>
@@ -91,16 +82,7 @@ export default function Home() {
                 className="absolute right-6 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white transition-colors duration-200"
                 aria-label="Next image"
             >
-                <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="9 18 15 12 9 6" />
                 </svg>
             </button>
@@ -113,9 +95,7 @@ export default function Home() {
                             key={i}
                             onClick={() => setCurrentIndex(i)}
                             className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                                i === currentIndex
-                                    ? "bg-white scale-125"
-                                    : "bg-white/40"
+                                i === currentIndex ? "bg-white scale-125" : "bg-white/40"
                             }`}
                             aria-label={`Go to image ${i + 1}`}
                         />

@@ -10,7 +10,7 @@ export default function Projects() {
     useEffect(() => {
         async function loadProjects() {
             const res = await fetch(
-                "/api/folders?bucket=vkvrestauraties-images",
+                "/api/folders?project=vkvrestauraties",
             );
             const data = await res.json();
 
@@ -21,9 +21,10 @@ export default function Projects() {
                         folder.folder !== "aboutme",
                 )
                 .map((folder) => {
-                    const banner = folder.images.find((img) =>
-                        img.endsWith("banner.webp"),
-                    );
+                    // Banner image is now a full URL from metadata.bannerImage,
+                    // falling back to the first image in the folder.
+                    const banner =
+                        folder.metadata?.bannerImage || folder.images[0] || null;
                     return {
                         title: folder.title,
                         slug: folder.folder,
@@ -53,7 +54,7 @@ export default function Projects() {
                     >
                         {project.banner && (
                             <Image
-                                src={`https://vkvrestauraties-images.s3.eu-north-1.amazonaws.com/${project.banner}`}
+                                src={project.banner}
                                 alt={project.title || project.name}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-110"

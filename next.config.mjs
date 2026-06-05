@@ -1,12 +1,20 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: "https",
-                hostname: "vkvrestauraties-images.s3.eu-north-1.amazonaws.com",
+                protocol: "http",
+                hostname: "localhost",
+                port: "3000",
+            },
+            {
+                protocol: "http",
+                hostname: "192.168.178.211",
+                port: "3000",
             },
         ],
+        // Allow images served from private/loopback IPs (our Pi)
+        dangerouslyAllowSVG: true,
+        unoptimized: true,
     },
 };
 

@@ -1,64 +1,30 @@
-import {
-    S3Client,
-    ListObjectsV2Command,
-    GetObjectCommand,
-} from "@aws-sdk/client-s3";
+console.log("folders route loaded");
+
 import { NextResponse } from "next/server";
 
-const s3 = new S3Client({
-    region: process.env.S3_REGION,
-    credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    },
-});
-
-// Simple in-memory cache (works in dev / non-serverless environments)
+// Simple in-memory cache
 let folderCache = null;
 let cacheTimestamp = null;
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
-async function streamToBuffer(stream) {
-    const chunks = [];
-    for await (const chunk of stream) {
-        chunks.push(chunk);
-    }
-    return Buffer.concat(chunks);
-}
-
-async function getFilesInFolder(folderName, bucket) {
-    const { Contents } = await s3.send(
-        new ListObjectsV2Command({
-            Bucket: bucket,
-            Prefix: folderName,
-        }),
-    );
-
-    const images = [];
-    let metadata = null;
-
-    Contents?.forEach((file) => {
-        const fileName = file.Key.split("/").pop();
-        if (!fileName) return;
-
-        if (fileName === "metadata.json") {
-            metadata = file;
-        } else {
-            images.push(file.Key);
-        }
-    });
-
-    return { images, metadata };
+// Rewrites a Portfolio Manager image URL to go through our local proxy,
+// avoiding cross-origin browser blocks.
+function proxyUrl(imageUrl) {
+    return `/api/image-proxy?url=${encodeURIComponent(imageUrl)}`;
 }
 
 export async function GET(req) {
     try {
         const { searchParams } = new URL(req.url);
-        const bucket = searchParams.get("bucket");
 
-        if (!bucket) {
+        const project = searchParams.get("project");
+        const host =
+            process.env.NEXT_PUBLIC_PORTFOLIO_MANAGER_IP ||
+            "http://localhost:3000";
+
+        if (!project) {
             return NextResponse.json(
-                { error: "Bucket name is required as query parameter." },
+                { error: "Project name is required as query parameter (?project=)." },
                 { status: 400 },
             );
         }
@@ -69,49 +35,31 @@ export async function GET(req) {
             return NextResponse.json({ folders: folderCache });
         }
 
-        const { CommonPrefixes } = await s3.send(
-            new ListObjectsV2Command({
-                Bucket: bucket,
-                Delimiter: "/",
-            }),
-        );
+        const res = await fetch(`${host}/api/public/${project}`, {
+            cache: "no-store",
+        });
 
-        const uniqueFolders =
-            CommonPrefixes?.map((prefix) => prefix.Prefix.replace(/\/$/, "")) ||
-            [];
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({ error: res.statusText }));
+            return NextResponse.json(
+                { error: err.error || "Portfolio Manager request failed" },
+                { status: res.status },
+            );
+        }
 
-        const foldersData = await Promise.all(
-            uniqueFolders.map(async (folder) => {
-                const { images, metadata } = await getFilesInFolder(
-                    folder,
-                    bucket,
-                );
+        const { folders: pmFolders } = await res.json();
 
-                let metadataContent = null;
-
-                if (metadata) {
-                    const metadataData = await s3.send(
-                        new GetObjectCommand({
-                            Bucket: bucket,
-                            Key: metadata.Key,
-                        }),
-                    );
-
-                    const metadataBuffer = await streamToBuffer(
-                        metadataData.Body,
-                    );
-
-                    metadataContent = JSON.parse(metadataBuffer.toString());
-                }
-
-                return {
-                    folder,
-                    title: metadataContent?.title || folder,
-                    images,
-                    metadata: metadataContent,
-                };
-            }),
-        );
+        const foldersData = pmFolders.map((f) => ({
+            folder: f.folder,
+            title: f.projectName || f.folder,
+            // Rewrite all image URLs through our local proxy
+            images: f.images.map((img) => proxyUrl(img.url)),
+            metadata: {
+                title: f.projectName || f.folder,
+                bannerImage: f.bannerImage ? proxyUrl(f.bannerImage) : null,
+                folder: f.folder,
+            },
+        }));
 
         folderCache = foldersData;
         cacheTimestamp = now;

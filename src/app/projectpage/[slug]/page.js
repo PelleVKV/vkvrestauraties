@@ -16,7 +16,7 @@ export default function ProjectPage() {
     useEffect(() => {
         async function loadProject() {
             try {
-                const res = await fetch("/api/folders?bucket=vkvrestauraties-images");
+                const res = await fetch("/api/folders?project=vkvrestauraties");
                 const data = await res.json();
 
                 const project = data.folders.find(
@@ -24,10 +24,8 @@ export default function ProjectPage() {
                 );
 
                 if (project) {
-                    const filtered = project.images.filter(
-                        (img) => img.split("/")[1] !== ""
-                    );
-                    setProjectImages(filtered);
+                    // Images are now full URLs — no prefix needed, no key filtering.
+                    setProjectImages(project.images);
                 }
             } finally {
                 setLoading(false);
@@ -122,7 +120,7 @@ export default function ProjectPage() {
                         onClick={() => setFullscreen(true)}
                     >
                         <Image
-                            src={`${process.env.NEXT_PUBLIC_S3_URL}${projectImages[imageIndex]}`}
+                            src={projectImages[imageIndex]}
                             alt="project"
                             fill
                             className="object-contain select-none"
@@ -167,7 +165,7 @@ export default function ProjectPage() {
 
                         <div className="relative w-full h-full">
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_S3_URL}${projectImages[imageIndex]}`}
+                                src={projectImages[imageIndex]}
                                 alt="project"
                                 fill
                                 className="object-contain select-none"
