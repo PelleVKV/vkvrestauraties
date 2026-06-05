@@ -56,7 +56,7 @@ export default function Home() {
                 <Image
                     key={index}
                     src={img}
-                    alt="Banner"
+                    alt="VKV Restauraties - Monumentale restauraties Amsterdam"
                     fill
                     priority={index === 0}
                     className={`object-cover transition-opacity duration-1000 ${

@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+    title: "Projecten",
+    description: "Bekijk onze restauratieprojecten in Amsterdam — van funderingsherstel tot monumentaal stukwerk.",
+    alternates: { canonical: "https://vkvrestauraties.nl/projects" },
+};
+
 export default function Projects() {
     const [projects, setProjects] = useState([]);
 

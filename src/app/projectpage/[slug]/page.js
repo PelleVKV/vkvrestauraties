@@ -5,6 +5,20 @@ import { useParams } from "next/navigation";
 import { Spin } from "antd";
 import Image from "next/image";
 
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const name = decodeURIComponent(slug);
+    return {
+        title: name,
+        description: `Bekijk het restauratieproject ${name} uitgevoerd door VKV Restauraties in Amsterdam.`,
+        alternates: { canonical: `https://vkvrestauraties.nl/projectpage/${slug}` },
+        openGraph: {
+            title: `${name} | VKV Restauraties`,
+            type: "article",
+        },
+    };
+}
+
 export default function ProjectPage() {
     const { slug } = useParams();
 
@@ -121,7 +135,7 @@ export default function ProjectPage() {
                     >
                         <Image
                             src={projectImages[imageIndex]}
-                            alt="project"
+                            alt={`Restauratieproject ${decodeURIComponent(slug)} - VKV Restauraties`}
                             fill
                             className="object-contain select-none"
                             sizes="100vw"
