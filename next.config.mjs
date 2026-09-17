@@ -11,10 +11,13 @@ const nextConfig = {
                 hostname: "192.168.178.211",
                 port: "3000",
             },
+            {
+                protocol: "https",
+                hostname: "portfolio-manager.vkvdev.com",
+            },
         ],
         // Allow images served from private/loopback IPs (our Pi)
         dangerouslyAllowSVG: true,
-        unoptimized: true,
     },
 };
 

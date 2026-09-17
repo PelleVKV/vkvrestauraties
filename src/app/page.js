@@ -52,18 +52,22 @@ export default function Home() {
 
     return (
         <div className="relative w-screen h-screen overflow-hidden inset-0">
-            {images.map((img, index) => (
-                <Image
-                    key={index}
-                    src={img}
-                    alt="VKV Restauraties - Monumentale restauraties Amsterdam"
-                    fill
-                    priority={index === 0}
-                    className={`object-cover transition-opacity duration-1000 ${
-                        index === currentIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                />
-            ))}
+            {images.length > 0 && [currentIndex, (currentIndex + 1) % images.length]
+                .filter((index, position, indexes) => indexes.indexOf(index) === position)
+                .map((index) => (
+                    <Image
+                        key={images[index]}
+                        src={images[index]}
+                        alt="VKV Restauraties - Monumentale restauraties Amsterdam"
+                        fill
+                        priority={index === currentIndex}
+                        sizes="100vw"
+                        quality={82}
+                        className={`object-cover transition-opacity duration-1000 ${
+                            index === currentIndex ? "opacity-100" : "opacity-0"
+                        }`}
+                    />
+                ))}
 
             {/* Left arrow */}
             <button

@@ -4,12 +4,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-    title: "Projecten",
-    description: "Bekijk onze restauratieprojecten in Amsterdam — van funderingsherstel tot monumentaal stukwerk.",
-    alternates: { canonical: "https://vkvrestauraties.nl/projects" },
-};
-
 export default function Projects() {
     const [projects, setProjects] = useState([]);
 
@@ -30,7 +24,11 @@ export default function Projects() {
                     // Banner image is now a full URL from metadata.bannerImage,
                     // falling back to the first image in the folder.
                     const banner =
-                        folder.metadata?.bannerImage || folder.images[0] || null;
+                        folder.metadata?.bannerThumbnail ||
+                        folder.thumbnails?.[0] ||
+                        folder.metadata?.bannerImage ||
+                        folder.images[0] ||
+                        null;
                     return {
                         title: folder.title,
                         slug: folder.folder,
@@ -63,6 +61,7 @@ export default function Projects() {
                                 src={project.banner}
                                 alt={project.title || project.name}
                                 fill
+                                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 33vw, 20vw"
                                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         )}
